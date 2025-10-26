@@ -1,0 +1,8 @@
+init_config:
+
+instances:
+  - name: alb_target_check
+    target_group_arns: #Replace with the actual ARNs of the Target groups
+      - arn:aws:elasticloadbalancing:us-east-1:123456789012:targetgroup/my-web-app-tg/abcdef1234567890
+      - arn:aws:elasticloadbalancing:us-east-1:123456789012:targetgroup/my-web-app-tg-2/abcdef1234567890
+    min_collection_interval: 60 #Run Every 60 seconds
